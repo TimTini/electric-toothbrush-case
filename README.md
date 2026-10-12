@@ -60,3 +60,7 @@ Audit bản đầy đủ cần các file kiểm tra được tạo bằng `--che
 ### Kiểm chứng
 
 Các STL mặc định đã được kiểm tra mesh kín, hướng mặt nhất quán, 19 lỗ đáy Ø3, lòng thân Ø42,4 xuyên cổ và ren không va chạm tại 10 vị trí lấy mẫu. Bản in thử giữ cùng đáy và ren với bản đầy đủ. Đây là kiểm tra hình học số; chưa kiểm chứng bằng bản in thực tế hoặc đo bàn chải cụ thể.
+
+## Bộ tài liệu agent tự học.
+
+[Cẩm nang dùng chung](https://github.com/TimTini/snaplock-storage-box/blob/main/docs/agent-learning.md) tổng hợp quy trình SCAD trước rồi Fusion Python sau. [Sổ lỗi và cách sửa](https://github.com/TimTini/snaplock-storage-box/blob/main/docs/error-cookbook.md) ghi các ca kỹ thuật cùng phạm vi kiểm chứng. [Mẫu giao việc](https://github.com/TimTini/snaplock-storage-box/blob/main/docs/scad-to-fusion-task.md) áp dụng quy trình cho model mới.
