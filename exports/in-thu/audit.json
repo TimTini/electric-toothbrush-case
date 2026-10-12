@@ -1,0 +1,32 @@
+{
+  "body_height_mm": 31.6,
+  "cap_height_mm": 24,
+  "assembled_height_mm": 42,
+  "outside_diameter_mm": 51.4,
+  "body_inside_diameter_mm": 42.4,
+  "body_wall_thickness_mm": 4.5,
+  "bottom_holes": 19,
+  "hole_diameter_mm": 3,
+  "reference_region_symmetric_difference_mm3": {
+    "body_bottom": 0.0,
+    "body_neck_and_thread": 0.002550866363054293,
+    "cap_bottom": 0.0,
+    "cap_thread_and_lip": 0.0013305510848335197
+  },
+  "sampled_thread_collision_mm3": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "model_volume_mm3": 29939.196429701202,
+  "full_model_volume_mm3": 166840.09637117878,
+  "geometric_volume_reduction_percent": 82.0551551570111,
+  "physical_print_tested": false
+}

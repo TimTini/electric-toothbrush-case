@@ -1,0 +1,102 @@
+{
+  "body_faces": 66826,
+  "cap_faces": 50386,
+  "body_bounds": [
+    [
+      -25.700000762939453,
+      -25.700000762939453,
+      0.0
+    ],
+    [
+      25.700000762939453,
+      25.700000762939453,
+      213.60000610351562
+    ]
+  ],
+  "cap_bounds": [
+    [
+      -25.700000762939453,
+      -25.700000762939453,
+      0.0
+    ],
+    [
+      25.700000762939453,
+      25.700000762939453,
+      85.19999694824219
+    ]
+  ],
+  "body_genus": 19,
+  "cap_genus": 0,
+  "outside_bottom_radius_mm": 3.6,
+  "outer_bottom_arc_sampled": true,
+  "body_volume_mm3": 139359.40704202576,
+  "cap_volume_mm3": 27480.689329153007,
+  "assembly_height_mm": 285.2,
+  "assembly_cap_rotation_degrees": 78.46153846153823,
+  "screw_motion_collision_volumes_mm3": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "side_drains_disabled": true,
+  "side_wall_axes_sealed": 32,
+  "bottom_holes_open": 19,
+  "bottom_hole_diameter_mm": 3,
+  "bottom_layers": [
+    {
+      "radius_mm": 0,
+      "count": 1
+    },
+    {
+      "radius_mm": 7,
+      "count": 6
+    },
+    {
+      "radius_mm": 14,
+      "count": 12,
+      "phase_degrees": 15
+    }
+  ],
+  "bottom_hole_minimum_web_mm": 3.9999999999999982,
+  "bottom_holes_to_inner_fillet_mm": 2.9,
+  "independent_cut_symmetric_difference_mm3": 1.5072668353681832e-05,
+  "removed_bounds": [
+    -15.022961568046956,
+    -15.022961568046957,
+    0.0,
+    15.022961568046956,
+    15.022961568046956,
+    2.5999999046325684
+  ],
+  "off_bounds_topology_volume_match": true,
+  "no_drain_variant_genus": 0,
+  "wider_clearance_variant_inner_radius_mm": 24.200000762939453,
+  "nominal_body_throat_diameter_mm": 42.4,
+  "body_inside_diameter_mm": 42.4,
+  "body_wall_thickness_mm": 4.5,
+  "neck_wall_thickness_mm": 1.8,
+  "usable_axial_length_mm": 280.0,
+  "reference_proxy_diameter_mm": 35,
+  "reference_proxy_length_mm": 270,
+  "reference_proxy_collision_volumes_mm3": [
+    0.0,
+    0.0
+  ],
+  "reference_proxy_axial_margin_each_end_mm": 5,
+  "reference_proxy_passes_body_mouth": true,
+  "repeated_index_zero_area_faces": {
+    "body.stl": 0,
+    "cap.stl": 0,
+    "body-no-drains.stl": 0,
+    "cap-clearance-04.stl": 0,
+    "body.off": 0,
+    "cap.off": 0
+  }
+}

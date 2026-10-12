@@ -1,0 +1,9 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "author": "",
+  "description": {"": "Hộp bàn chải: cổ thân ren ngoài, gờ ren tròn Join trong lòng nắp Ø48, 2,5 vòng/pha90° như SCAD; bốn mặt đầu ren nghiêng 70° theo F3D chỉnh tay. Fusion September 2026 trở lên."},
+  "version": "6.2.0",
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}
