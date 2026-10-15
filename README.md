@@ -2,6 +2,8 @@
 
 Hộp đựng bàn chải điện có nắp vặn, dựng bằng OpenSCAD tham số. Source độc lập, không import STL hoặc cần thư viện SCAD bên ngoài.
 
+Bản chính của hướng dẫn chung nằm tại `H:/OpenSCAD/docs/guides`, dùng cho mọi dự án STL, OpenSCAD và Fusion. [Bản lưu công khai 1.0.2](https://github.com/TimTini/snaplock-storage-box/tree/e9311687b4653a4055597ba93b595d739734020c/docs/guides) giữ nội dung theo commit trước khi chuyển thư mục.
+
 Có thêm [script Autodesk Fusion](fusion/README.md) với **cổ thân ren tròn ngoài, nắp ren trong** như vị trí trong SCAD. Phiên bản6 dùng gờ ren Join nhô vào lòng nắp Ø48 xuyên tới miệng, 2,5 vòng/pha90° như SCAD; giữ lòng thân/cổ Ø42,4. Ren dùng surface helix và Sweep tròn, không Loft hoặc miệng thắt; Bản6.2 nghiêng bốn mặt đầu ren 70° theo F3D chỉnh tay; hai đầu vẫn chưa fade như SCAD. Các bước này chỉ có trong script Fusion, STL OpenSCAD không đổi. Cần Fusion September 2026 trở lên. Đã kiểm thử tính toán; chưa chạy kiểm chứng bản mới trong Fusion hoặc in thử; không dùng lẫn với cặp SCAD cũ.
 
 ![Mặt cắt bản in thử](exports/in-thu/section.png)
@@ -63,4 +65,4 @@ Các STL mặc định đã được kiểm tra mesh kín, hướng mặt nhất
 
 ## Bộ tài liệu agent tự học.
 
-[Bộ hướng dẫn chung STL, OpenSCAD và Fusion](https://github.com/TimTini/snaplock-storage-box/blob/main/docs/guides/README.md) có [điểm vào cho agent](https://github.com/TimTini/snaplock-storage-box/blob/main/docs/guides/START-HERE.md), quy trình theo đầu vào, thiết lập chuyển máy, template và registry nguồn. Các hồ sơ của project này là ví dụ có phạm vi riêng.
+[Bộ hướng dẫn chung STL, OpenSCAD và Fusion](https://github.com/TimTini/snaplock-storage-box/blob/e9311687b4653a4055597ba93b595d739734020c/docs/guides/README.md) có [điểm vào cho agent](https://github.com/TimTini/snaplock-storage-box/blob/e9311687b4653a4055597ba93b595d739734020c/docs/guides/START-HERE.md), quy trình theo đầu vào, thiết lập chuyển máy, template và registry nguồn. Các hồ sơ của project này là ví dụ có phạm vi riêng.
