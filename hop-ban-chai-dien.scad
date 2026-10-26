@@ -10,9 +10,9 @@
 output_part = "layout"; // [layout,body,cap,assembled,section,bottom_detail]
 // Outside diameter of body and cap. Body bore = this minus 2 * wall_thickness.
 outside_diameter = 51.4;
-// Overall body height including the neck. Height changes also need advanced shoulder/thread positions.
+// Overall body height including the neck. The shoulder and male thread move with it.
 body_height = 213.6;
-// Overall cap height. Height changes also need advanced cap_thread_z.
+// Overall cap height. The female thread moves with it and stays fixed to the mouth.
 cap_height = 85.2;
 // Main body wall; changing it also changes the shared body/neck bore.
 wall_thickness = 4.5;
@@ -29,8 +29,8 @@ bottom_drain_diameter = 3;
 thread_clearance = 0.2;
 
 /* [Advanced settings] */
-// Neck position and edge fillets. Keep shoulder and thread heights coordinated.
-shoulder_height = 200;
+// Neck length from shoulder to mouth. Body and cap height move the shoulder and both threads.
+neck_height = 13.6;
 shoulder_radius = 0.6;
 neck_root_diameter = 46;
 neck_lip_radius = 0.8;
@@ -41,9 +41,11 @@ cap_entry_radius = 0.7;
 thread_pitch = 4.68;
 thread_radius = 0.9;
 thread_embed = 0.1;
-body_thread_z = 202.45;
+// Male thread start above the shoulder.
+thread_offset = 2.45;
+// Extra setback of the cap thread from the mouth, beyond the neck length.
+cap_thread_offset = 0.4;
 body_thread_turns = 2;
-cap_thread_z = 71.2;
 cap_thread_turns = 2.5;
 cap_thread_phase = 90;
 thread_end_taper = 45;
@@ -62,6 +64,9 @@ body_inner_r = outer_r-wall_thickness;
 neck_r = neck_root_diameter/2;
 // One bore through the body and neck; no internal shoulder.
 neck_inner_r = body_inner_r;
+shoulder_height = body_height-neck_height;
+body_thread_z = shoulder_height+thread_offset;
+cap_thread_z = cap_height-neck_height-cap_thread_offset;
 male_thread_center = neck_r-thread_embed;
 male_thread_crest = male_thread_center+thread_radius;
 cap_inner_r = male_thread_crest+thread_clearance;
@@ -73,6 +78,8 @@ assembly_rotation = ((assembly_top-(cap_thread_z-thread_pitch*cap_thread_phase/3
 eps = 0.02;
 
 assert(outside_diameter>0 && body_height>shoulder_height && cap_height>0);
+assert(shoulder_height-shoulder_radius>=outside_bottom_radius,
+       "Body is too short; the shoulder meets the bottom fillet");
 assert(wall_thickness>0 && bottom_thickness>0);
 assert(outside_bottom_radius>0 && outside_bottom_radius<outer_r);
 assert(inside_bottom_radius>0 && inside_bottom_radius<body_inner_r);

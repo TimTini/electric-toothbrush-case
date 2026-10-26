@@ -39,8 +39,11 @@ class RoundThreadTest(unittest.TestCase):
             p=case.defaults(short); d=case.dimensions(p)
             for key in ('thread_pitch','thread_radius','thread_embed','thread_clearance','outside_bottom_radius','inside_bottom_radius'):
                 self.assertAlmostEqual(p[key],scalars[key])
-            self.assertAlmostEqual(d['body_thread_z'],scalars['body_thread_z'])
-            self.assertAlmostEqual(d['cap_thread_z'],scalars['cap_thread_z'])
+            self.assertRegex(source,r'(?m)^shoulder_height\s*=\s*body_height\s*-\s*neck_height\s*;')
+            self.assertRegex(source,r'(?m)^body_thread_z\s*=\s*shoulder_height\s*\+\s*thread_offset\s*;')
+            self.assertRegex(source,r'(?m)^cap_thread_z\s*=\s*cap_height\s*-\s*neck_height\s*-\s*cap_thread_offset\s*;')
+            self.assertAlmostEqual(d['body_thread_z'],scalars['body_height']-scalars['neck_height']+scalars['thread_offset'])
+            self.assertAlmostEqual(d['cap_thread_z'],scalars['cap_height']-scalars['neck_height']-scalars['cap_thread_offset'])
             self.assertAlmostEqual(d['cap_thread_turns'],scalars['cap_thread_turns'])
             self.assertAlmostEqual(p['cap_thread_phase'],scalars['cap_thread_phase'])
 

@@ -4,7 +4,7 @@ Cấu trúc thư mục và vai trò dữ liệu: [docs/STRUCTURE.md](docs/STRUCT
 
 Hộp đựng bàn chải điện có nắp vặn, dựng bằng OpenSCAD tham số. Source độc lập, không import STL hoặc cần thư viện SCAD bên ngoài.
 
-Bản chính của hướng dẫn chung nằm tại `H:/OpenSCAD/docs/guides`, dùng cho mọi dự án STL, OpenSCAD và Fusion. [Bản lưu công khai 1.0.2](https://github.com/TimTini/snaplock-storage-box/tree/e9311687b4653a4055597ba93b595d739734020c/docs/guides) giữ nội dung theo commit trước khi chuyển thư mục.
+Hướng dẫn chung dùng cho các dự án STL, OpenSCAD và Fusion: [bản lưu công khai 1.0.2](https://github.com/TimTini/snaplock-storage-box/tree/e9311687b4653a4055597ba93b595d739734020c/docs/guides). Bản lưu giữ nội dung tại commit được liên kết.
 
 Có thêm [script Autodesk Fusion](fusion/README.md) với **cổ thân ren tròn ngoài, nắp ren trong** như vị trí trong SCAD. Phiên bản6 dùng gờ ren Join nhô vào lòng nắp Ø48 xuyên tới miệng, 2,5 vòng/pha90° như SCAD; giữ lòng thân/cổ Ø42,4. Ren dùng surface helix và Sweep tròn, không Loft hoặc miệng thắt; Bản6.2 nghiêng bốn mặt đầu ren 70° theo F3D chỉnh tay; hai đầu vẫn chưa fade như SCAD. Các bước này chỉ có trong script Fusion, STL OpenSCAD không đổi. Cần Fusion September 2026 trở lên. Đã kiểm thử tính toán; chưa chạy kiểm chứng bản mới trong Fusion hoặc in thử; không dùng lẫn với cặp SCAD cũ.
 
@@ -16,9 +16,9 @@ Source chính ở ngoài cùng:
 
 Trong mỗi file và bảng Customizer, thông số được chia thành hai nhóm:
 - `Common settings - mm`: phần xuất, đường kính ngoài, chiều cao thân/nắp, độ dày thành/đáy, bo đáy ngoài/trong, bật/tắt và đường kính lỗ thoát nước, độ hở ren.
-- `Advanced settings`: vị trí cổ, các bo mép nhỏ, hình học và vị trí ren, bố trí vòng lỗ, độ mịn mesh. Các giá trị tính toán nằm trong `Hidden`.
+- `Advanced settings`: chiều dài cổ, các bo mép nhỏ, hình học ren và độ lệch ren so với vai/miệng, bố trí vòng lỗ, độ mịn mesh. Vai và vị trí ren nằm trong `Hidden`, tính từ chiều cao.
 
-Đường kính lòng thân = đường kính ngoài trừ hai lần độ dày thành. Khi đổi chiều cao thân/nắp, cần chỉnh tương ứng `shoulder_height`, `body_thread_z`, `cap_thread_z` trong nhóm nâng cao; các vị trí này vẫn là giá trị tuyệt đối, chưa tự thay đổi theo chiều cao.
+Đường kính lòng thân = đường kính ngoài trừ hai lần độ dày thành. Đổi `body_height` hoặc `cap_height` thì vai và ren đi theo: cổ giữ `neck_height`, ren thân cách vai `thread_offset`, ren nắp lùi thêm `cap_thread_offset` so với miệng.
 
 Kích thước hiện tại, đơn vị mm:
 - Lòng thân và miệng ren cùng Ø42,4; thành trong thẳng, không còn đoạn thắt ở cổ.
