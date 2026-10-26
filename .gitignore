@@ -5,10 +5,13 @@
 !/requirements.txt
 !/hop-ban-chai-dien.scad
 !/in-thu.scad
-!/Nguon/
+!/reference/
 !/exports/
 !/fusion/
 !/tests/
+!/docs/
+/docs/*
+!/docs/STRUCTURE.md
 !/work/
 /work/*
 
@@ -22,18 +25,18 @@
 /tests/*
 !/tests/test_fusion_case.py
 
-/Nguon/*
-!/Nguon/electric-toothbrush-case-bottom19/
-!/Nguon/electric-toothbrush-case-print-test/
-/Nguon/*/*
-!/Nguon/electric-toothbrush-case-bottom19/build.py
-!/Nguon/electric-toothbrush-case-bottom19/audit_model.py
-!/Nguon/electric-toothbrush-case-bottom19/verify_straight_bore.py
-!/Nguon/electric-toothbrush-case-bottom19/pink-preview.scad
-!/Nguon/electric-toothbrush-case-bottom19/README.md
-!/Nguon/electric-toothbrush-case-print-test/build.py
-!/Nguon/electric-toothbrush-case-print-test/audit_trial.py
-!/Nguon/electric-toothbrush-case-print-test/README.md
+/reference/*
+!/reference/electric-toothbrush-case-bottom19/
+!/reference/electric-toothbrush-case-print-test/
+/reference/*/*
+!/reference/electric-toothbrush-case-bottom19/build.py
+!/reference/electric-toothbrush-case-bottom19/audit_model.py
+!/reference/electric-toothbrush-case-bottom19/verify_straight_bore.py
+!/reference/electric-toothbrush-case-bottom19/pink-preview.scad
+!/reference/electric-toothbrush-case-bottom19/README.md
+!/reference/electric-toothbrush-case-print-test/build.py
+!/reference/electric-toothbrush-case-print-test/audit_trial.py
+!/reference/electric-toothbrush-case-print-test/README.md
 
 /exports/*
 !/exports/ban-day-du/

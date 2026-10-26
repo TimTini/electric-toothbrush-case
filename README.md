@@ -1,5 +1,7 @@
 # Hộp bàn chải điện
 
+Cấu trúc thư mục và vai trò dữ liệu: [docs/STRUCTURE.md](docs/STRUCTURE.md).
+
 Hộp đựng bàn chải điện có nắp vặn, dựng bằng OpenSCAD tham số. Source độc lập, không import STL hoặc cần thư viện SCAD bên ngoài.
 
 Bản chính của hướng dẫn chung nằm tại `H:/OpenSCAD/docs/guides`, dùng cho mọi dự án STL, OpenSCAD và Fusion. [Bản lưu công khai 1.0.2](https://github.com/TimTini/snaplock-storage-box/tree/e9311687b4653a4055597ba93b595d739734020c/docs/guides) giữ nội dung theo commit trước khi chuyển thư mục.
@@ -41,8 +43,8 @@ Mở một trong hai file `.scad` ở thư mục gốc bằng OpenSCAD. Trong Cu
 Chạy từ thư mục gốc project:
 
 ```powershell
-python Nguon/electric-toothbrush-case-bottom19/build.py --previews --check-variants
-python Nguon/electric-toothbrush-case-print-test/build.py --previews
+python reference/electric-toothbrush-case-bottom19/build.py --previews --check-variants
+python reference/electric-toothbrush-case-print-test/build.py --previews
 ```
 
 Build chỉ dùng thư viện chuẩn Python. Các script audit cần dependency trong `requirements.txt`:
@@ -50,9 +52,9 @@ Build chỉ dùng thư viện chuẩn Python. Các script audit cần dependency
 ```powershell
 python -m venv .venv
 .venv/Scripts/python -m pip install -r requirements.txt
-.venv/Scripts/python Nguon/electric-toothbrush-case-bottom19/audit_model.py
-.venv/Scripts/python Nguon/electric-toothbrush-case-print-test/audit_trial.py
-.venv/Scripts/python Nguon/electric-toothbrush-case-bottom19/verify_straight_bore.py
+.venv/Scripts/python reference/electric-toothbrush-case-bottom19/audit_model.py
+.venv/Scripts/python reference/electric-toothbrush-case-print-test/audit_trial.py
+.venv/Scripts/python reference/electric-toothbrush-case-bottom19/verify_straight_bore.py
 ```
 
 Trên Linux/macOS, thay `.venv/Scripts/python` bằng `.venv/bin/python`. Các phiên bản dependency được ghi theo môi trường Python 3.12.14 đã chạy audit; khả năng cài trên các phiên bản Python/OS khác chưa được kiểm chứng. Chạy audit với Python thông thường, không dùng `-O` hoặc đặt `PYTHONOPTIMIZE`, vì các kiểm tra sử dụng `assert`.
